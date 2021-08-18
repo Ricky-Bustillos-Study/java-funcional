@@ -1,5 +1,7 @@
 package one.digitalinnovation;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -11,6 +13,16 @@ public class Iterations {
         Integer[] numbers = {1, 2, 3, 4, 5};
         printFilteredNames(names);
         printAllNames(names);
+        printDoubleOfEachListItem(numbers);
+        
+        List<String> professions = new ArrayList<>();
+        professions.add("Developer");
+        professions.add("Tester");
+        professions.add("Project manager");
+        professions.add("Quality manager");
+        professions.stream()
+                .filter(profession -> profession.contains("manager"))
+                .forEach(System.out::println);
     }
 
     public static void printFilteredNames(String... names){
@@ -36,5 +48,15 @@ public class Iterations {
 
         Stream.of(names)
                 .forEach(name -> System.out.println("Stream forEach: " + name));
+    }
+
+    public static void printDoubleOfEachListItem(Integer... numbers) {
+        for (Integer number : numbers) {
+            System.out.println(number * 2);
+        }
+
+        Stream.of(numbers)
+                .map(number -> number * 2)
+                .forEach(System.out::println);
     }
 }
