@@ -1,4 +1,4 @@
-package one.digitalinnovation;
+package one.digitalinnovation.functionalInterfaces;
 
 import java.util.function.Predicate;
 

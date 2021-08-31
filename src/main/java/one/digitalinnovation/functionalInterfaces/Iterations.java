@@ -1,4 +1,4 @@
-package one.digitalinnovation;
+package one.digitalinnovation.functionalInterfaces;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ public class Iterations {
         printFilteredNames(names);
         printAllNames(names);
         printDoubleOfEachListItem(numbers);
-        
+
         List<String> professions = new ArrayList<>();
         professions.add("Developer");
         professions.add("Tester");
